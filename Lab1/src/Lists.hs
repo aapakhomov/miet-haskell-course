@@ -69,7 +69,7 @@ mapFuncs (fs:fss) x = (fs x):(mapFuncs fss x)
 -- и возвращает True, если все они выполняются (т.е. возвращают True) для x.
 -- Полезные стандартные функции: and, all.
 -- satisfiesAll [even, \x -> x `rem` 5 == 0] 10 == True
--- satisfiesAll [] 4 == True (кстати, почему?)
+-- satisfiesAll [] 4 == True (кстати, почему?) -- потому что это нейтральный элемент, отсутствие условий не должно нарушать истинность результата, иначе бы не работала рекурсия
 satisfiesAll :: [a -> Bool] -> a -> Bool
 satisfiesAll [] x = True
 satisfiesAll (pred:preds) x = pred x && satisfiesAll preds x

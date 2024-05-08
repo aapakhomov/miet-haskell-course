@@ -36,7 +36,7 @@ decreaseLarge x
 
 -- decreaseAllLarge [] == []
 -- decreaseAllLarge [1] == [1]
--- decreaseAllLarge [1, 9, 3] == [1, 2, 3]
+-- decreaseAllLarge [1, 18, 3] == [1, 9, 3]
 -- decreaseAllLarge [10, 2, 18] == [1, 2, 9]
 decreaseAllLarge :: [Int] -> [Int]
 decreaseAllLarge digs = map decreaseLarge digs
