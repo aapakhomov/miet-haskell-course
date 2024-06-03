@@ -95,8 +95,8 @@ filterA predicate = foldr (\x -> liftA2' (\cond -> if cond then (x:) else id) (p
 -- Композиция монадических функций
 -- composeM Just Just == Just (т.е. для всех x: composeM Just Just x == Just x)
 -- composeM Just (const Nothing) == const Nothing
---composeM :: Applicative' m => (b -> m c) -> (a -> m b) -> (a -> m c)
---composeM f g = \x -> g x >>== f
+-- composeM :: Applicative' m => (b -> m c) -> (a -> m b) -> (a -> m c)
+-- composeM f g = \x -> g x >>== f 
 
 -- Задание 3 -----------------------------------------
 

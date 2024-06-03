@@ -71,9 +71,9 @@ nats = sIterate ((+) 1) 0
 -- делящая n нацело. Подсказка: с помощью sInterleave это можно сделать без
 -- проверок на делимость, если её реализация ленива по второму аргументу
 -- (подумайте, почему это важно).
-pows 0 = 0
-pows 1 = 0
-pows x = if x `mod` 2 == 0 then 1 + pows (x-1) else 0 
+-- pows 0 = 0
+-- pows 1 = 0
+-- pows x = if x `mod` 2 == 0 then 1 + pows (x-1) else 0 
 ruler :: Stream Integer
 ruler = helper 0 where helper n = sInterleave (sRepeat n) (helper (n + 1))
 
